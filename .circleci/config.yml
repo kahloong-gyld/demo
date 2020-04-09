@@ -3,3 +3,12 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 version: 2.1
 
+jobs:
+  build:
+
+  steps:
+    - run:
+        name: The First step
+        command: |
+          echo 'hello world!'
+          echo 'This is the delivery pipeline'
