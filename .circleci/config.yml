@@ -1,14 +1,8 @@
-# Java Gradle CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
 version: 2.1
-
 jobs:
   build:
-
-  steps:
-    - run:
-        name: The First step
-        command: |
-          echo 'hello world!'
-          echo 'This is the delivery pipeline'
+    docker:
+      - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
